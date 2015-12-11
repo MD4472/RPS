@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>RPS</title>
+  <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <!-- <link rel="stylesheet" type="text/css" href="css/loops.css"> -->
+  <link rel="stylesheet" type="text/css" href="css/animations.css">
+  <link rel="stylesheet" type="text/css" href="css/custom.css">
+</head>
+<body>
+  <div class="container">
+    <div class="row" id="buttonRow">
+      <div class="col-md-10" id="game-running">
+      <p></p>
+      </div> 
+      <div class="col-md-2">
+        <button class="btn btn-block btn-danger" data-status="on" id="toggleBtn">Game On</button>  
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-6">
+        <h1>Choose One!</h1>
+        <p id="rounds"></p>
+<!--             <p id="yourWins"></p>
+            <p id="computerWins"></p> -->
+        <p id="userScore"></p>
+        <p id="computerScore"></p>
+        <p id="computerChoice"></p>
+      </div>
+    </div>
+    <div class="row" id="buttonRow">
+      <div class="col-md-4">
+        <img id="rock" src="http://thumbs.dreamstime.com/t/cartoon-rock-family-illustrated-set-rocks-theme-43969344.jpg">
+        <!-- <button class= "btn btn-block btn-warning">Control Button</button> -->
+      </div>
+      <div class="col-md-4">
+        <img id="paper" src="http://images.freeimages.com/images/premium/large-thumbs/5011/50114248-cartoon-toilet-roll.jpg">
+        <!-- <button class= "btn btn-block btn-warning">Control Button</button> -->
+      </div>
+      <div class="col-md-4">
+        <img id="scissors" src="http://images.all-free-download.com/images/graphicthumb/tango_edit_cut_115931.jpg">
+        <!-- <button class= "btn btn-block btn-warning">Control Button</button> -->
+      </div>
+    </div>
+  </div>
+</div>
+
+  <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.min.js"></script> 
+<!--   // <script type="text/javascript" src="js/toggleStates.js"></script> 
+  // <script type="text/javascript" src="js/loops.js"></script> -->
+  <script type="text/javascript" src="js/rps.js"></script>
+</body>
+</html>
