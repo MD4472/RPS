@@ -14,3 +14,22 @@
 #rock{
   margin-top:23px;
 }
+
+h1{
+  text-align: center;
+}
+
+#pmodal{
+  text-align: center;
+}
+
+#rock, #paper, #scissors {
+  
+  margin-left: 90px; 
+}
+
+#modalheadingaboveicons{
+  text-align: center;
+  font-size: 20px;
+  font-weight: bold;
+}

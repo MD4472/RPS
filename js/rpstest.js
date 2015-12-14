@@ -50,8 +50,13 @@ $(document).ready(function(){
         $('#yourWins').html(yourWins);
         $('#computerWins').html(computerWins);
         //console.log($('p'));
-        // $('p').each(function() {
-        //     $('p')--.html();
-        // });
+        $('p').each(function(index, item) {
+            // $('p')--.html();
+            // console.log(this);
+            console.log(index);
+            console.log(item);
+            console.log($(item).attr('id'));
+            // console.log($(item).attr('id')-1);
+        });
     });
 });

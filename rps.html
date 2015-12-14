@@ -11,10 +11,12 @@
 <body>
   <div class="container">
     <div class="row" id="buttonRow">
-      <div class="col-md-10" id="game-running">
-      <p></p>
-      </div> 
-      <div class="col-md-2">
+      <div class="col-xs-12" id="game-running">
+        <p></p>
+      </div>  
+    </div>    
+    <div class="row">   
+      <div class="col-xs-2 col-xs-offset-10">
         <button class="btn btn-block btn-danger" data-status="on" id="toggleBtn">Game On</button>  
       </div>
     </div>
@@ -29,28 +31,10 @@
       </div>
     </div>
 
-    <!-- TIE MODAL -->
-    <div class="modal fade" id="modalTie" tabindex="-1" role="dialog">
-      <div class="modal-dialog modal-lg">
-        <div class="modal-content">
-          <div class="modal-header">
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-            <h4 class="modal-title">Guess What???</h4>
-          </div>
-          <div class="modal-body">
-            <p>We have a tie!&hellip;</p>
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-          </div>
-        </div><!-- /.modal-content -->
-      </div><!-- /.modal-dialog -->
-    </div><!-- /.modal -->
-
-    <!-- ROCK MODAL -->
+    <!-- ROCK TIE MODAL -->
     <!-- Large modal -->
     <!-- <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal-lg">Large modal</button> -->
-    <div class="modal fade" id="rockModal" tabindex="-1" role="dialog">
+    <div class="modal fade" id="rockTieModal" tabindex="-1" role="dialog">
       <div class="modal-dialog modal-lg">
         <div class="modal-content">
           <div class="modal-header">
@@ -58,8 +42,19 @@
             <h4 class="modal-title">Let's see here:</h4>
           </div>
           <div class="modal-body">
-            <p>The computer chose:</p>
-            <img id="rock" src="http://thumbs.dreamstime.com/t/cartoon-rock-family-illustrated-set-rocks-theme-43969344.jpg">
+            <div class="row">
+              <div class="col-xs-12"><h1>We have a tie!!</h1></div> 
+            </div>
+            <div class="row">
+              <div class="col-xs-6">
+                <p id="pmodal">The computer chose:</p>
+                <img id="rock" src="http://thumbs.dreamstime.com/t/cartoon-rock-family-illustrated-set-rocks-theme-43969344.jpg">
+              </div>
+              <div class="col-xs-6">  
+                <p id="pmodal">You clicked on:</p>
+                <img id="rock" src="http://thumbs.dreamstime.com/t/cartoon-rock-family-illustrated-set-rocks-theme-43969344.jpg">
+              </div> 
+            </div>
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -68,20 +63,273 @@
       </div><!-- /.modal-dialog -->
     </div><!-- /.modal -->
 
+    <!-- PAPER TIE MODAL -->
+    <!-- Large modal -->
+    <!-- <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal-lg">Large modal</button> -->
+    <div class="modal fade" id="paperTieModal" tabindex="-1" role="dialog">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title">Let's see here:</h4>
+          </div>
+          <div class="modal-body">
+            <div class="row">
+              <div class="col-xs-12"><h1>We have a tie!!</h1></div> 
+            </div>
+            <div class="row">
+              <div class="col-xs-6">
+                <p id="pmodal">The computer chose:</p>
+                <img id="paper" src="http://images.freeimages.com/images/premium/large-thumbs/5011/50114248-cartoon-toilet-roll.jpg">
+              </div>
+              <div class="col-xs-6">  
+                <p id="pmodal">You clicked on:</p>
+                <img id="paper" src="http://images.freeimages.com/images/premium/large-thumbs/5011/50114248-cartoon-toilet-roll.jpg">
+              </div> 
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          </div>
+        </div><!-- /.modal-content -->
+      </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->  
 
+    <!-- SCISSORS TIE MODAL -->
+    <!-- Large modal -->
+    <!-- <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal-lg">Large modal</button> -->
+    <div class="modal fade" id="scissorsTieModal" tabindex="-1" role="dialog">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title">Let's see here:</h4>
+          </div>
+          <div class="modal-body">
+            <div class="row">
+              <div class="col-xs-12"><h1>We have a tie!!</h1></div> 
+            </div>
+            <div class="row">
+              <div class="col-xs-6">
+                <p id="pmodal">The computer chose:</p>
+                <img id="scissors" src="http://images.all-free-download.com/images/graphicthumb/tango_edit_cut_115931.jpg">
+              </div>
+              <div class="col-xs-6">  
+                <p id="pmodal">You clicked on:</p>
+                <img id="scissors" src="http://images.all-free-download.com/images/graphicthumb/tango_edit_cut_115931.jpg">
+              </div> 
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          </div>
+        </div><!-- /.modal-content -->
+      </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
 
+    <!-- Comp Win Paper Rock -->
+    <!-- Large modal -->
+    <!-- <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal-lg">Large modal</button> -->
+    <div class="modal fade" id="CwinPaperRock" tabindex="-1" role="dialog">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title">Let's see here:</h4>
+          </div>
+          <div class="modal-body">
+            <div class="row">
+              <div class="col-xs-12"><h1>Paper beats rock, so the computer wins!</h1></div> 
+            </div>
+            <div class="row">
+              <div class="col-xs-6">
+                <p id="pmodal">The computer chose:</p>
+                <img id="paper" src="http://images.freeimages.com/images/premium/large-thumbs/5011/50114248-cartoon-toilet-roll.jpg">
+              </div>
+              <div class="col-xs-6">  
+                <p id="pmodal">You clicked on:</p>
+                <img id="rock" src="http://thumbs.dreamstime.com/t/cartoon-rock-family-illustrated-set-rocks-theme-43969344.jpg">
+              </div> 
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          </div>
+        </div><!-- /.modal-content -->
+      </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+
+    <!-- User Win Paper Rock -->
+    <!-- Large modal -->
+    <!-- <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal-lg">Large modal</button> -->
+    <div class="modal fade" id="UwinPaperRock" tabindex="-1" role="dialog">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title">Let's see here:</h4>
+          </div>
+          <div class="modal-body">
+            <div class="row">
+              <div class="col-xs-12"><h1>Paper beats rock, so you win!</h1></div> 
+            </div>
+            <div class="row">
+              <div class="col-xs-6">
+                <p id="pmodal">The computer chose:</p>
+                <img id="paper" src="http://images.freeimages.com/images/premium/large-thumbs/5011/50114248-cartoon-toilet-roll.jpg">
+              </div>
+              <div class="col-xs-6">  
+                <p id="pmodal">You clicked on:</p>
+                <img id="rock" src="http://thumbs.dreamstime.com/t/cartoon-rock-family-illustrated-set-rocks-theme-43969344.jpg">
+              </div> 
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          </div>
+        </div><!-- /.modal-content -->
+      </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->    
+
+    <!-- Computer Win Scissors Rock -->
+    <!-- Large modal -->
+    <!-- <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal-lg">Large modal</button> -->
+    <div class="modal fade" id="CwinScissorsRock" tabindex="-1" role="dialog">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title">Let's see here:</h4>
+          </div>
+          <div class="modal-body">
+            <div class="row">
+              <div class="col-xs-12"><h1>Rock beats scissors, so the computer wins!</h1></div> 
+            </div>
+            <div class="row">
+              <div class="col-xs-6">
+                <p id="pmodal">The computer chose:</p>
+                <img id="rock" src="http://thumbs.dreamstime.com/t/cartoon-rock-family-illustrated-set-rocks-theme-43969344.jpg">              
+              </div>
+              <div class="col-xs-6">  
+                <p id="pmodal">You clicked on:</p>
+                <img id="scissors" src="http://images.all-free-download.com/images/graphicthumb/tango_edit_cut_115931.jpg">
+              </div> 
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          </div>
+        </div><!-- /.modal-content -->
+      </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->  
+
+    <!-- User Win Scissors Rock -->
+    <!-- Large modal -->
+    <!-- <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal-lg">Large modal</button> -->
+    <div class="modal fade" id="UwinScissorsRock" tabindex="-1" role="dialog">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title">Let's see here:</h4>
+          </div>
+          <div class="modal-body">
+            <div class="row">
+              <div class="col-xs-12"><h1>Rock beats scissors, so you win!</h1></div> 
+            </div>
+            <div class="row">
+              <div class="col-xs-6">
+                <p id="pmodal">The computer chose:</p>
+                <img id="scissors" src="http://images.all-free-download.com/images/graphicthumb/tango_edit_cut_115931.jpg">              
+              </div>
+              <div class="col-xs-6">  
+                <p id="pmodal">You clicked on:</p>
+                <img id="rock" src="http://thumbs.dreamstime.com/t/cartoon-rock-family-illustrated-set-rocks-theme-43969344.jpg">
+              </div> 
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          </div>
+        </div><!-- /.modal-content -->
+      </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->  
+
+    <!-- Computer Win Paper Scissors-->
+    <!-- Large modal -->
+    <!-- <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal-lg">Large modal</button> -->
+    <div class="modal fade" id="CwinPaperScissors" tabindex="-1" role="dialog">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title">Let's see here:</h4>
+          </div>
+          <div class="modal-body">
+            <div class="row">
+              <div class="col-xs-12"><h1>Scissors beats paper, so the computer wins!</h1></div> 
+            </div>
+            <div class="row">
+              <div class="col-xs-6">
+                <p id="pmodal">The computer chose:</p>
+                <img id="scissors" src="http://images.all-free-download.com/images/graphicthumb/tango_edit_cut_115931.jpg">              
+              </div>
+              <div class="col-xs-6">  
+                <p id="pmodal">You clicked on:</p>
+                <img id="paper" src="http://images.freeimages.com/images/premium/large-thumbs/5011/50114248-cartoon-toilet-roll.jpg">
+              </div> 
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          </div>
+        </div><!-- /.modal-content -->
+      </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->   
+
+    <!-- User Win Paper Scissors -->
+    <!-- Large modal -->
+    <!-- <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal-lg">Large modal</button> -->
+    <div class="modal fade" id="UwinPaperScissors" tabindex="-1" role="dialog">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title">Let's see here:</h4>
+          </div>
+          <div class="modal-body">
+            <div class="row">
+              <div class="col-xs-12"><h1>Scissors beats paper, so you win!</h1></div> 
+            </div>
+            <div class="row">
+              <div class="col-xs-6">
+                <p id="pmodal">The computer chose:</p>
+                <img id="paper" src="http://images.freeimages.com/images/premium/large-thumbs/5011/50114248-cartoon-toilet-roll.jpg">             
+              </div>
+              <div class="col-xs-6">  
+                <p id="pmodal">You clicked on:</p>
+                <img id="scissors" src="http://images.all-free-download.com/images/graphicthumb/tango_edit_cut_115931.jpg"> 
+              </div> 
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          </div>
+        </div><!-- /.modal-content -->
+      </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
 
     <div class="row" id="buttonRow">
       <div class="col-md-4">
-        <img id="rock" src="http://thumbs.dreamstime.com/t/cartoon-rock-family-illustrated-set-rocks-theme-43969344.jpg">
+        <img class="image" id="rock" src="http://thumbs.dreamstime.com/t/cartoon-rock-family-illustrated-set-rocks-theme-43969344.jpg">
         <!-- <button class= "btn btn-block btn-warning">Control Button</button> -->
       </div>
       <div class="col-md-4">
-        <img id="paper" src="http://images.freeimages.com/images/premium/large-thumbs/5011/50114248-cartoon-toilet-roll.jpg">
+        <img class="image" id="paper" src="http://images.freeimages.com/images/premium/large-thumbs/5011/50114248-cartoon-toilet-roll.jpg">
         <!-- <button class= "btn btn-block btn-warning">Control Button</button> -->
       </div>
       <div class="col-md-4">
-        <img id="scissors" src="http://images.all-free-download.com/images/graphicthumb/tango_edit_cut_115931.jpg">
+        <img class="image" id="scissors" src="http://images.all-free-download.com/images/graphicthumb/tango_edit_cut_115931.jpg">
         <!-- <button class= "btn btn-block btn-warning">Control Button</button> -->
       </div>
     </div>
@@ -90,8 +338,8 @@
 
   <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.min.js"></script> 
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-<!--   // <script type="text/javascript" src="js/toggleStates.js"></script> 
-  // <script type="text/javascript" src="js/loops.js"></script> -->
+  <!-- // <script type="text/javascript" src="js/toggleStates.js"></script>  -->
+  <!-- // <script type="text/javascript" src="js/loops.js"></script> -->
   <script type="text/javascript" src="js/rps.js"></script>
 </body>
 </html>

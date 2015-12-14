@@ -1,6 +1,6 @@
 $(document).ready(function(){
 // // alert("hi");
-// if game === on {
+ if game === on {
 
 var rounds = 1;
 var ties = 0;
@@ -8,7 +8,8 @@ var userScore = 0;
 var computerScore = 0;
 var computerChoice = "The computer has not decided yet.";
 var userChoice;
-// var imgRock;
+// var imgPaper = "http://images.freeimages.com/images/premium/large-thumbs/5011/50114248-cartoon-toilet-roll.jpg"
+
 
     
 
@@ -49,9 +50,12 @@ function compare(userChoice, computerChoice)
 
     if (userChoice === computerChoice) 
         {   ties++;
+
+            // $('#modalheadingaboveicons').html("You both chose the same thing.  We have a tie!");
+            // $('#Modal').modal('show');
             return ("The result is a tie!");
 
-        }
+        } 
 
     else if(userChoice === "rock") 
         {
@@ -93,10 +97,13 @@ function compare(userChoice, computerChoice)
 }
 
 
+if (rounds >= 7){
+//create modal and suspend activity
+//reset, etc.
 
+}
 
-
-    $('img').on('click', function(){
+    $('.image').on('click', function(){
         $(this).addClass('bigEntrance');
             setTimeout(function() {
                 $(this).removeClass('bigEntrance');
@@ -116,16 +123,55 @@ function compare(userChoice, computerChoice)
     //         $('#modalTie').modal('show');
             
     //     }
-
-        if (computerChoice === "rock") 
+    
+    if (computerChoice === "rock" && userChoice === "rock") 
             // && userChoice === "paper")
-
         {   
-            $('#rockModal').modal('show');
+            $('#rockTieModal').modal('show');
+        }
+    else if(computerChoice === "paper" && userChoice === "paper") 
+        {
+            $('#paperTieModal').modal('show');
+        }
+    else if(computerChoice === "scissors" && userChoice === "scissors") 
+        {
+            $('#scissorsTieModal').modal('show');
+        }
+    else if(computerChoice === "paper" && userChoice === "rock")
+        {
+            $('#CwinPaperRock').modal('show');
+        }  
+    else if(computerChoice === "rock" && userChoice === "paper")
+        {
+            $('#UwinPaperRock').modal('show');
+        }
+    else if(computerChoice === "rock" && userChoice === "scissors")
+        {
+            $('#CwinScissorsRock').modal('show');  
+        } 
+    else if(computerChoice === "scissors" && userChoice === "rock")
+        {
+            $('#UwinScissorsRock').modal('show');
 
+        } 
+    else if(computerChoice === "scissors" && userChoice === "paper")
+        {
+            $('#CwinPaperScissors').modal('show');
+              
+        }
+    else if(computerChoice === "paper" && userChoice === "scissors")
+        {          
+            $('#UwinPaperScissors').modal('show');
+        
         }
 
+          
 
+    // else{
+    //         $('#UwinpPaperScissors').modal('show');
+    //     }
+                        
+        //               
         // ----------------------------------------------
         // modals go here --- open modal and display info
         // ----------------------------------------------
