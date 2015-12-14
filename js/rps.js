@@ -1,6 +1,6 @@
 $(document).ready(function(){
 // // alert("hi");
- if game === on {
+ // if game === on {
 
 var rounds = 1;
 var ties = 0;
