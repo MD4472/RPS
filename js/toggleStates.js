@@ -17,6 +17,9 @@ var userChoice;
     if($(this).attr("data-status") === "on") {
         $('.image').removeClass("hidden");
         // $('.image').addClass("slideUp");
+        //     setTimeout(function() {
+        //       $('.image').removeClass('slideUp');
+        //         }, 20000);
         $("#game-running p").html("GAME IS ON");
         $(this)
           .html("ON")//GREEN the text in the parentheses 
@@ -35,12 +38,13 @@ var userChoice;
         .removeClass("btn-success")
         .attr("data-status", "on")
         .removeClass("bigEntrance");
+        
       $('#rounds').html("Round number: " + rounds);
       $('#ties').html("Ties: " + ties);
       $('#userScore').html("Your score: " + userScore);
       $('#computerScore').html("Computer score: " +computerScore);
       $('#computerChoice').html("Computer choice: " + computerChoice);
-
+      window.location.reload();
       // $(".image").on("click", function(){
       //   $(".image").off("click");
     }
