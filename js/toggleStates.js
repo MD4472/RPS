@@ -38,7 +38,6 @@ var userChoice;
         .removeClass("btn-success")
         .attr("data-status", "on")
         .removeClass("bigEntrance");
-        
       $('#rounds').html("Round number: " + rounds);
       $('#ties').html("Ties: " + ties);
       $('#userScore').html("Your score: " + userScore);
